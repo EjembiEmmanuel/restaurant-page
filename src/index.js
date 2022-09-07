@@ -1,5 +1,6 @@
 import './style.css';
-// import ChefImage from './chef.jpg';
+import ChefImage from './assets/img/chef.jpg';
+import GitHubIcon from './assets/icons/github.svg';
 
 
 function component() {
@@ -27,8 +28,11 @@ function component() {
     const contactTab = document.createElement('li');
 
     const homeLink = document.createElement('a');
+    homeLink.setAttribute('href', '#');
     const menuLink = document.createElement('a');
+    menuLink.setAttribute('href', '#');
     const contactLink = document.createElement('a');
+    contactLink.setAttribute('href', '#');
 
     homeLink.textContent = 'Home';
     menuLink.textContent = 'Menu';
@@ -45,16 +49,50 @@ function component() {
     navbar.appendChild(navlinks); 
     // Header
 
-    // Add the image to our existing div.
-    // const chefImage = new Image();
-    // chefImage.src = ChefImage;
+    // Main
+    const main = document.createElement('div');
+    main.setAttribute('class', 'main');
 
-    // element.appendChild(chefImage);
+    const mainText1 = document.createElement('p');
+    const mainText2 = document.createElement('p');
+    const chefImage = new Image();
+    const mainText3 = document.createElement('p');
+
+    mainText1.textContent = 'Get your fill in minutes';
+    mainText2.textContent = 'Serving you fast food 24/7';
+    chefImage.src = ChefImage;
+    mainText3.textContent = 'Order online or visit us!';
+
+    main.appendChild(mainText1);
+    main.appendChild(mainText2);
+    main.appendChild(chefImage);
+    main.appendChild(mainText3);
+    // Main
+
+    // Footer
+    const footer = document.createElement('div')
+    footer.setAttribute('class', 'footer');
+
+    const footerText = document.createElement('p');
+    const footerLink = document.createElement('a');
+    const footerIcon = new Image();
+
+    footerText.textContent = 'Copyright \u00A9 2022 ejembiemmanuel';
+    footerLink.setAttribute('href', '#');
+    footerIcon.src = GitHubIcon;
+
+    footerLink.appendChild(footerIcon);
+
+    footer.appendChild(footerText);
+    footer.appendChild(footerLink);
+    // Footer
 
     header.appendChild(title);
     header.appendChild(navbar);
 
     content.appendChild(header);
+    content.appendChild(main);
+    content.appendChild(footer);
 
     return content;
 }
