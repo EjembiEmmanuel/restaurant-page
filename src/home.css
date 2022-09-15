@@ -1,0 +1,44 @@
+/* Main */
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    width: 600px;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.main p {
+    color: white;
+    font-family: 'Roboto-Regular';
+}
+
+.main p:nth-child(2) {
+    margin-bottom: 40px;
+}
+
+.main p:nth-child(4) {
+    margin-top: 40px;
+}
+
+.main img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+/* Main */
